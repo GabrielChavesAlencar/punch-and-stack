@@ -20,12 +20,15 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(carregado){
+        if(carregado&&obj_seguir!=null){
             anim.SetBool("carregado",true);
             transform.position = Vector3.Lerp(transform.position+new Vector3(0,0.12f,0),obj_seguir.transform.position,0.12f);
             transform.rotation = obj_seguir.transform.rotation;
             rig.useGravity = false;
             col.enabled = false;
+        }else{
+            rig.useGravity = true;
+            col.enabled = true;
         }
     }
 }

@@ -15,5 +15,6 @@ public class cam : MonoBehaviour
     void Update()
     {
         transform.LookAt(Player.transform);
+        transform.position = Vector3.Lerp(transform.position,Player.transform.position+new Vector3(2.5f,7f,-3f),0.1f);
     }
 }
