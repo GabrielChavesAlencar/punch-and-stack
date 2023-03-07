@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         
         Vector3 dir = new Vector3(mov_h,0,mov_v);
         if(dir != Vector3.zero){
-            transform.Translate(Vector3.forward*Time.deltaTime*2);
+            transform.Translate(Vector3.forward*Time.deltaTime*velocidade);
             
             anim.SetBool("andando",true);
             transform.LookAt(transform.position + dir);
@@ -65,6 +65,10 @@ public class Player : MonoBehaviour
             jogo.money += jogo.quantidade*10;
             jogo.quantidade = 0;
 
+        }
+        if(other.gameObject.tag =="upgrade"&&jogo.money>10){
+            jogo.capacidademax++;
+            jogo.money -=10; 
         }
     }
     IEnumerator Soco(Collider other){

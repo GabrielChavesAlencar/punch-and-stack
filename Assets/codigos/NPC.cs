@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
     {
         if(carregado&&obj_seguir!=null){
             anim.SetBool("carregado",true);
-            transform.position = Vector3.Lerp(transform.position+new Vector3(0,0.12f,0),obj_seguir.transform.position,0.12f);
+            transform.position = Vector3.Lerp(transform.position+new Vector3(0,0.2f,0),obj_seguir.transform.position,0.27f);
             transform.rotation = obj_seguir.transform.rotation;
             rig.useGravity = false;
             col.enabled = false;
