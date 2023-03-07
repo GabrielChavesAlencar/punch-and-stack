@@ -47,6 +47,7 @@
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\codigos\cam.cs" />
      <Compile Include="Assets\codigos\jogo.cs" />
+     <Compile Include="Assets\codigos\evento.cs" />
      <None Include="Assets\Human_cloth_model\Readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.34f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

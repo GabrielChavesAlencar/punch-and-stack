@@ -63,10 +63,11 @@ public class Player : MonoBehaviour
             NPCtemp = null;
             NPCtempbase = null;
             jogo.money += jogo.quantidade*10;
+            jogo.pontuacao +=jogo.quantidade;
             jogo.quantidade = 0;
 
         }
-        if(other.gameObject.tag =="upgrade"&&jogo.money>10){
+        if(other.gameObject.tag =="upgrade"&&jogo.money>=10){
             jogo.capacidademax++;
             jogo.money -=10; 
         }

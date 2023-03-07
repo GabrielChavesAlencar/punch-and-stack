@@ -8,10 +8,12 @@ public class jogo : MonoBehaviour
     public static int quantidade;
     public static int capacidademax;
     public static int money;
+    public static int pontuacao;
 
     public Text money_tex;
 
     public Text capacidade_text;
+     public Text pontuacao_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class jogo : MonoBehaviour
     {
         money_tex.text = "Money $"+money;
         capacidade_text.text = "Capacity "+quantidade+"/"+capacidademax;
+        pontuacao_text.text = "Score: "+pontuacao;
 
     }
 }
